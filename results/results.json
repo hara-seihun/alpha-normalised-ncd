@@ -1,0 +1,257 @@
+{
+  "kind": "constructed_demonstration",
+  "mutations": {
+    "irrelevant_novelty": {
+      "baseline": {
+        "original_passes": true,
+        "padded_passes": true
+      },
+      "boundary_fault": {
+        "original_passes": false,
+        "padded_passes": false
+      }
+    },
+    "matrix": {
+      "boundary_greater_or_equal": {
+        "applicable_tests": 3,
+        "killed": 2,
+        "tests": {
+          "contract_derived_oracle": {
+            "baseline_passes": true,
+            "fault_passes": false
+          },
+          "independent_boundary_examples": {
+            "baseline_passes": true,
+            "fault_passes": false
+          },
+          "independent_nonboundary_examples": {
+            "baseline_passes": true,
+            "fault_passes": true
+          }
+        }
+      },
+      "constant_canonicalizer": {
+        "applicable_tests": 2,
+        "killed": 1,
+        "tests": {
+          "anchored_example": {
+            "baseline_passes": true,
+            "fault_passes": false
+          },
+          "idempotence": {
+            "baseline_passes": true,
+            "fault_passes": true
+          }
+        }
+      },
+      "missing_failure_cleanup": {
+        "applicable_tests": 2,
+        "killed": 1,
+        "tests": {
+          "failure_cleanup_and_exception_identity": {
+            "baseline_passes": true,
+            "fault_passes": false
+          },
+          "successful_effects": {
+            "baseline_passes": true,
+            "fault_passes": true
+          }
+        }
+      }
+    },
+    "shared_fault_boundary": {
+      "faulty_implementation": 8,
+      "independent_contract": 5,
+      "mirrored_faulty_oracle": 8,
+      "mirrored_test_accepts_fault": true,
+      "weight": 10
+    },
+    "totals": {
+      "applicable_observations": 7,
+      "faults_detected": 3,
+      "faults_injected": 3,
+      "killed_observations": 4
+    }
+  },
+  "refactoring_checks": {
+    "aggregation_policy_errors": true,
+    "aggregation_values": true,
+    "resource_failure_cleanup": true,
+    "resource_values_and_effects": true
+  },
+  "similarity": {
+    "pairs": {
+      "boundary_regression": {
+        "normalized_bytes": [
+          682,
+          683
+        ],
+        "normalized_compressed_bytes": [
+          285,
+          286
+        ],
+        "normalized_ncd": 0.055944055944055944,
+        "raw_ncd": 0.20512820512820512,
+        "source_bytes": [
+          124,
+          140
+        ],
+        "source_compressed_bytes": [
+          102,
+          117
+        ]
+      },
+      "contract_derived_oracle": {
+        "normalized_bytes": [
+          682,
+          735
+        ],
+        "normalized_compressed_bytes": [
+          285,
+          298
+        ],
+        "normalized_ncd": 0.11409395973154363,
+        "raw_ncd": 0.4840764331210191,
+        "source_bytes": [
+          124,
+          220
+        ],
+        "source_compressed_bytes": [
+          102,
+          157
+        ]
+      },
+      "mirrored_faulty_oracle": {
+        "normalized_bytes": [
+          683,
+          735
+        ],
+        "normalized_compressed_bytes": [
+          286,
+          297
+        ],
+        "normalized_ncd": 0.09427609427609428,
+        "raw_ncd": 0.26495726495726496,
+        "source_bytes": [
+          140,
+          144
+        ],
+        "source_compressed_bytes": [
+          117,
+          116
+        ]
+      },
+      "padded_comments": {
+        "normalized_bytes": [
+          682,
+          682
+        ],
+        "normalized_compressed_bytes": [
+          285,
+          285
+        ],
+        "normalized_ncd": 0.03859649122807018,
+        "raw_ncd": 0.965799786248664,
+        "source_bytes": [
+          124,
+          3724
+        ],
+        "source_compressed_bytes": [
+          102,
+          2807
+        ]
+      },
+      "padded_oracle_comments": {
+        "normalized_bytes": [
+          998,
+          998
+        ],
+        "normalized_compressed_bytes": [
+          288,
+          288
+        ],
+        "normalized_ncd": 0.04861111111111111,
+        "raw_ncd": 0.9488339714584059,
+        "source_bytes": [
+          211,
+          3811
+        ],
+        "source_compressed_bytes": [
+          152,
+          2873
+        ]
+      },
+      "padded_oracle_computation": {
+        "normalized_bytes": [
+          998,
+          3190
+        ],
+        "normalized_compressed_bytes": [
+          288,
+          597
+        ],
+        "normalized_ncd": 0.5494137353433836,
+        "raw_ncd": 0.6730158730158731,
+        "source_bytes": [
+          211,
+          547
+        ],
+        "source_compressed_bytes": [
+          152,
+          315
+        ]
+      },
+      "renamed_aggregation": {
+        "normalized_bytes": [
+          1451,
+          1456
+        ],
+        "normalized_compressed_bytes": [
+          449,
+          453
+        ],
+        "normalized_ncd": 0.09933774834437085,
+        "raw_ncd": 0.2235294117647059,
+        "source_bytes": [
+          284,
+          288
+        ],
+        "source_compressed_bytes": [
+          169,
+          170
+        ]
+      },
+      "renamed_resource_protocol": {
+        "normalized_bytes": [
+          928,
+          926
+        ],
+        "normalized_compressed_bytes": [
+          299,
+          296
+        ],
+        "normalized_ncd": 0.08695652173913043,
+        "raw_ncd": 0.17796610169491525,
+        "source_bytes": [
+          195,
+          191
+        ],
+        "source_compressed_bytes": [
+          118,
+          118
+        ]
+      }
+    },
+    "runtime": {
+      "compression_level": 9,
+      "ncd_concatenation": "min(C(x+y), C(y+x))",
+      "normalization": "ancd-single-function-ast-v1",
+      "python_implementation": "CPython",
+      "python_version": "3.13.15",
+      "wbits": 15,
+      "zlib_compile_version": "1.3.2",
+      "zlib_runtime_version": "1.3.2"
+    },
+    "status": "measured"
+  }
+}

@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Please cite the research note when discussing the method, and this repository when using the reference implementation."
+title: "Shared Structure, Independent Evidence: Alpha-normalised compression distance for refactoring and test design"
+type: article
+authors:
+  - family-names: Seihun
+    given-names: Hara Renia
+version: 0.1.0
+date-released: 2026-09-24
+url: "https://github.com/hara-seihun/alpha-normalised-ncd"
+repository-code: "https://github.com/hara-seihun/alpha-normalised-ncd"
+license: MIT
+keywords:
+  - normalized compression distance
+  - alpha normalisation
+  - refactoring
+  - test oracles
+  - mutation testing
+  - code similarity
+abstract: >-
+  A research note and executable demonstrations of alpha-normalised
+  compression distance as an attention signal for structural refactoring
+  and implementation-mirroring test oracles. Independent behavioural
+  constraints, rather than textual novelty alone, provide test value.

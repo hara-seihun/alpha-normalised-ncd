@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alpha-normalised-ncd"
+version = "0.1.0"
+description = "A scoped Python alpha-normalised compression-distance reference tool"
+requires-python = ">=3.10"
+dependencies = []
+authors = [{name = "Hara Renia Seihun"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/hara-seihun/alpha-normalised-ncd"
+Paper = "https://github.com/hara-seihun/alpha-normalised-ncd/blob/main/paper/paper.pdf"
+
+[project.scripts]
+ancd = "ancd.__main__:main"
+
+[tool.setuptools]
+packages = ["ancd"]
